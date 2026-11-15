@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A (Slightly Late) Surprise ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500;1,9..144,700&family=Caveat:wght@600&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<canvas id="bg"></canvas>
+<canvas id="fx"></canvas>
+<div id="flash"></div>
+<button id="music" aria-label="Play music" title="Birthday music">🎵</button>
+
+<main>
+  <section id="intro">
+    <div class="orbit">🎁</div>
+    <h1 class="shimmer">Heyyy! Someone deserves a special surprise! ✨</h1>
+    <p class="sub">(yes, you. keep reading.)</p>
+    <button id="open" class="glow">Open Your Surprise 🎁</button>
+  </section>
+
+  <section id="reveal">
+    <div class="balloons" aria-hidden="true"></div>
+    <h2 class="late rv" style="--d:.1s">WAITTT... I’M LATE! 😭</h2>
+    <h2 class="hbd rv" style="--d:1.5s">Happy Belated Birthday! 🎂💗</h2>
+    <p class="lead rv" style="--d:2.6s">November 13 might have passed, but you deserve to be celebrated every single day!</p>
+    <div class="candles rv" style="--d:3.2s" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <span class="hint rv" style="--d:4s">scroll down ↓</span>
+  </section>
+
+  <section id="message">
+    <div class="glass note rv">
+      <span class="stamp">a note, a little late</span>
+      <p id="typed" aria-live="polite"></p><span class="caret"></span>
+      <button id="skip" class="ghost">tap to skip ⏭</button>
+    </div>
+  </section>
+
+  <section id="fun">
+    <h3 class="script rv">a few little surprises</h3>
+    <div class="duo">
+      <div class="glass tile rv">
+        <button id="gift" class="gift" aria-label="Open the gift box">
+          <span class="lid"><b></b></span><span class="box"><b></b></span>
+        </button>
+        <p id="giftTxt" class="cap">Tap the gift box 🎀</p>
+        <div id="prize" class="prize">Inside: one huge virtual hug 🤗, a lifetime supply of “sorry I’m late” coupons 🎟️, and a promise to be on time next year (terms &amp; conditions apply 😌)</div>
+      </div>
+      <div class="glass tile rv" style="--d:.15s">
+        <button id="cake" class="cakebtn" aria-label="Blow out the candles">
+          <svg viewBox="0 0 300 270" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd1e6"/><stop offset="1" stop-color="#ff8fc0"/></linearGradient>
+              <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3d6ff"/><stop offset="1" stop-color="#a98cf5"/></linearGradient>
+            </defs>
+            <ellipse cx="150" cy="248" rx="125" ry="15" fill="#fff" opacity=".18"/>
+            <rect x="48" y="170" width="204" height="72" rx="16" fill="url(#g2)"/>
+            <path d="M48 186h204v10c-10 14-20 14-30 0s-20 14-30 0-20 14-30 0-20 14-30 0-20 14-30 0-20 14-30 0-10 8-24 0z" fill="#fff" opacity=".85"/>
+            <rect x="82" y="112" width="136" height="64" rx="14" fill="url(#g1)"/>
+            <path d="M82 126h136v8c-8 12-16 12-24 0s-16 12-24 0-16 12-24 0-16 12-24 0-16 12-16 0z" fill="#fff" opacity=".9"/>
+            <circle cx="110" cy="158" r="5" fill="#ffd98a"/><circle cx="150" cy="162" r="5" fill="#ffd98a"/><circle cx="190" cy="158" r="5" fill="#ffd98a"/>
+            <g class="cs">
+              <rect x="104" y="80" width="9" height="34" rx="3" fill="#ffd98a"/><rect x="127" y="76" width="9" height="38" rx="3" fill="#ff9ecb"/>
+              <rect x="146" y="72" width="9" height="42" rx="3" fill="#c9b6ff"/><rect x="165" y="76" width="9" height="38" rx="3" fill="#ff9ecb"/><rect x="187" y="80" width="9" height="34" rx="3" fill="#ffd98a"/>
+              <ellipse class="fl" cx="108.5" cy="70" rx="6" ry="11"/><ellipse class="fl" cx="131.5" cy="66" rx="6" ry="11" style="animation-delay:.05s"/>
+              <ellipse class="fl" cx="150.5" cy="62" rx="6" ry="11" style="animation-delay:.1s"/><ellipse class="fl" cx="169.5" cy="66" rx="6" ry="11" style="animation-delay:.07s"/><ellipse class="fl" cx="191.5" cy="70" rx="6" ry="11" style="animation-delay:.03s"/>
+            </g>
+          </svg>
+        </button>
+        <p id="cakeTxt" class="cap">Tap the cake to blow the candles 🌬️</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h3 class="script rv">little frames, big smiles</h3>
+    <p class="mini rv">(swipe →)</p>
+    <div class="strip rv" id="strip"></div>
+  </section>
+
+  <section id="final">
+    <p class="script rv">okay, last one. promise.</p>
+    <h2 class="finale rv" style="--d:.2s">One More Time...<br><span>HAPPY BELATED BIRTHDAY! 🎀</span></h2>
+    <p class="lead rv" style="--d:.5s">Stay happy, keep shining, and never stop being amazing 💗</p>
+    <button id="replay" class="glow rv" style="--d:.8s">Replay the surprise ✨</button>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
